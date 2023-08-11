@@ -5,14 +5,29 @@ class Account:
         self.__account_balance = 0
 
     def deposit(self, amount: float) -> bool:
-        """Deposit the specified amount into the account balance."""
+        """Deposit the specified amount into the account balance.
+        
+        Args:
+            amount (float): The amount to be deposited.
+            
+        Returns:
+            bool: True if the deposit is successful, False 
+        """
+        
         if amount > 0:
             self.__account_balance += amount
             return True
         return False
 
     def withdraw(self, amount: float) -> bool:
-        """Withdraw the specified amount from the account balance."""
+        """Withdraw the specified amount from the account balance.
+        Args:
+            amount (float): The amount to be withdrawn.
+            
+        Returns:
+            bool: True if the withdrawal is successful, False
+        """
+        
         if 0 < amount <= self.__account_balance:
             self.__account_balance -= amount
             return True
